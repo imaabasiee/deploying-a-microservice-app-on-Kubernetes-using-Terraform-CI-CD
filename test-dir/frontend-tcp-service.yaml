@@ -18,6 +18,6 @@ spec:
     io.kompose.service: frontend
   type: LoadBalancer
   externalIPs:
-    - 3.95.209.219
+    - 54.175.120.211
 status:
   loadBalancer: {}
