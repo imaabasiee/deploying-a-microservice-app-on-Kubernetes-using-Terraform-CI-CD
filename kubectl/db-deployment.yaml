@@ -38,9 +38,9 @@ spec:
               value: $MONGO_USERNAME
             - name: MONGO_PASSWORD
               valueFrom:
-                secretKeyRef:
-                  name: mongo-secret
+                configMapKeyRef:
                   key: MONGO_PASSWORD
+                  name: env
             - name: MONGO_PORT
               valueFrom:
                 configMapKeyRef:
@@ -48,9 +48,9 @@ spec:
                   name: env
             - name: MONGO_USERNAME
               valueFrom:
-                secretKeyRef:
-                  name: mongo-secret
+                configMapKeyRef:
                   key: MONGO_USERNAME
+                  name: env
           image: mongo:4.1.8-xenial
           name: db
           resources: {}

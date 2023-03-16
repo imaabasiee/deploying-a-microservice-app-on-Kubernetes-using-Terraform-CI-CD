@@ -3,18 +3,19 @@ kind: Service
 metadata:
   annotations:
     kompose.cmd: kompose convert
+    kompose.service.type: LoadBalancer
     kompose.version: 1.28.0 (c4137012e)
   creationTimestamp: null
   labels:
-    io.kompose.service: nodejs
-  name: nodejs
+    io.kompose.service: nodejs-tcp
+  name: nodejs-tcp
 spec:
-  type: LoadBalancer
   ports:
     - name: "80"
       port: 80
       targetPort: 8080
   selector:
-    io.kompose.service: nodejs  
+    io.kompose.service: nodejs
+  type: LoadBalancer
 status:
   loadBalancer: {}
