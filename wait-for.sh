@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # original script: https://github.com/eficode/wait-for/blob/master/wait-for
 
