@@ -17,5 +17,7 @@ spec:
   selector:
     io.kompose.service: frontend
   type: LoadBalancer
+  externalIPs:
+    - 10.244.0.5
 status:
   loadBalancer: {}
