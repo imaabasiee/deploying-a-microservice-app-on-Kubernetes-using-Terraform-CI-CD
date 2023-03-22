@@ -115,7 +115,7 @@ jobs:
           command: |
             echo "$DOCKER_PASSWORD"
             docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-            docker tag $APP:latest $DOCKER_USERNAME/$NODE_APP
+            docker tag $NODE_APP:latest $DOCKER_USERNAME/$NODE_APP
             docker push $DOCKER_USERNAME/$NODE_APP
   
   deploy-nodejs-app:
