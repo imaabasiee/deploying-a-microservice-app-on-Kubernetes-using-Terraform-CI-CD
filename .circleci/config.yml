@@ -40,7 +40,7 @@ jobs:
           name: Terraform plan
           command: |
             cd terraform
-            terraform plan -out tfapply -var-file terraform.tfvars
+            terraform plan -out tfapply
       - persist_to_workspace:
           root: .
           paths:
